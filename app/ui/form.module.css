@@ -1,0 +1,88 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    background: white;
+    padding: 30px; /* Padding inside the modal */
+    border-radius: 12px; /* Rounded corners */
+    width: 50vw; /* 50% of viewport width */
+    max-width: 100%;
+    height: auto; /* Adjust height based on content */
+    max-height: 90vh; /* Limit height to viewport height */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    position: relative;
+    overflow-y: auto; /* Scroll if content overflows */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333; /* Dark color for visibility */
+  }
+  
+  .modalForm {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Space between items */
+  }
+  
+  .modalLabel {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%; /* Flex basis to handle wrapping and alignment */
+    margin-bottom: 20px; /* Space below each label */
+    font-size: 16px; /* Consistent font size */
+    font-weight: bold; /* Make labels bold for emphasis */
+  }
+  
+  .modalInput {
+    padding: 12px; /* Padding inside the input fields */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded input corners */
+    font-size: 16px; /* Font size for input text */
+    background-color: #f9f9f9; /* Light background color for shading */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Make input fields take full width of the label container */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+  }
+  
+  .modalSubmitButton {
+    padding: 14px 20px; /* Larger padding for the button */
+    border: none;
+    background: #0070f3; /* Blue background */
+    color: white;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded button corners */
+    font-size: 16px; /* Font size for the button */
+    font-weight: bold; /* Bold text for the button */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .modalSubmitButton:hover {
+    background: #005bb5; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .modalSubmitButton:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.2); /* Add custom focus ring */
+  }
+  
